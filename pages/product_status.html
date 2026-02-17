@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product Status | Event Management System</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body onload="renderProductStatus()">
+<nav><div class="nav-links"><a class="chart-btn" href="flowchart.html">Chart</a> <a href="vendor_dashboard.html">Home</a> <a href="add_item.html">Your Item</a> <a href="add_item.html">Add New Item</a> <a href="vendor_transactions.html">Transection</a> <a href="product_status.html">Product Status</a> <a href="request_item.html">Request Item</a> <a href="add_item.html">View Product</a> <a class="logout-btn" onclick="logout()">LogOut</a></div></nav>
+
+<div class="wrap">
+  <h2>Product Status</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Name</th><th>E-Mail</th><th>Address</th><th>Status</th><th>Update</th><th>Delete</th></tr></thead>
+      <tbody id="ps-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="../js/data.js"></script><script src="../js/auth.js"></script><script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Add Item | Event Management System</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body onload="renderYourItems()">
+<nav><div class="nav-links"><a class="chart-btn" href="flowchart.html">Chart</a> <a href="vendor_dashboard.html">Home</a> <a href="add_item.html">Your Item</a> <a href="add_item.html">Add New Item</a> <a href="vendor_transactions.html">Transection</a> <a href="product_status.html">Product Status</a> <a href="request_item.html">Request Item</a> <a href="add_item.html">View Product</a> <a class="logout-btn" onclick="logout()">LogOut</a></div></nav>
+
+<div class="wrap">
+  <div class="welcome">Welcome   'Vendor Name'</div>
+  <h2>Add New Item</h2>
+  <div id="ai-m" class="alert"></div>
+  <form id="f-ai" onsubmit="return addTheProduct(event)">
+    <div class="fg" id="g-ai-name">
+      <label>Product Name</label>
+      <input type="text" id="ai-name" placeholder="Product Name">
+      <div class="em">Required.</div>
+    </div>
+    <div class="fg" id="g-ai-price">
+      <label>Product Price (Rs/-)</label>
+      <input type="number" id="ai-price" placeholder="Product Price" min="1">
+      <div class="em">Required.</div>
+    </div>
+    <div class="fg">
+      <label>Product Image</label>
+      <input type="text" id="ai-img" placeholder="Product Image (emoji)">
+    </div>
+    <div class="bgrp">
+      <button type="submit" class="btn btn-primary">Add The Peoduct</button>
+    </div>
+  </form>
+
+  <h2 style="margin-top:26px;">Your Item</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Product Image</th><th>Product Name</th><th>Product Price (Rs/-)</th><th>Action</th></tr></thead>
+      <tbody id="yi-body"></tbody>
+    </table>
+  </div>
+
+  <div id="upd-sec" style="display:none;margin-top:20px;background:#f5f5f5;padding:16px;border-radius:7px;">
+    <h2>Update</h2>
+    <div id="upd-m" class="alert"></div>
+    <form id="f-upd" onsubmit="return doUpdate(event)">
+      <input type="hidden" id="upd-id">
+      <div class="fg" id="g-upd-name">
+        <label>Product Name</label>
+        <input type="text" id="upd-name">
+        <div class="em">Required.</div>
+      </div>
+      <div class="fg" id="g-upd-price">
+        <label>Product Price (Rs/-)</label>
+        <input type="number" id="upd-price" min="1">
+        <div class="em">Required.</div>
+      </div>
+      <div class="fg">
+        <label>Product Image</label>
+        <input type="text" id="upd-img">
+      </div>
+      <div class="bgrp">
+        <button type="button" class="btn btn-secondary" onclick="cancelUpd()">Cancel</button>
+        <button type="submit" class="btn btn-success">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="../js/data.js"></script><script src="../js/auth.js"></script><script src="../js/app.js"></script>
+</body>
+</html>

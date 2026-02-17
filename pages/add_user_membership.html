@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Add Membership | Event Management System</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav><div class="nav-links"><a class="chart-btn" href="flowchart.html">Chart</a> <a href="admin_dashboard.html">Home</a> <a href="maintain_user.html">Maintain User</a> <a href="maintain_vendor.html">Maintain Vendor</a> <a href="admin_reports.html">Reports</a> <a href="admin_transactions.html">Transactions</a> <a class="logout-btn" onclick="logout()">LogOut</a></div></nav>
+
+<div class="wrap" style="max-width:520px;">
+  <h2>Add Membership</h2>
+  <p style="color:#888;font-size:.84rem;margin-bottom:12px;">All fields mandatory. Select one option — 6 months or 1 year or 2 years. By default — 6 months is selected.</p>
+  <div id="aum-m" class="alert"></div>
+  <form id="f-aum" onsubmit="return addUM(event)">
+    <div class="fg" id="g-um-name">
+      <label>Name</label>
+      <input type="text" id="um-name">
+      <div class="em">Required.</div>
+    </div>
+    <div class="fg" id="g-um-email">
+      <label>Email</label>
+      <input type="email" id="um-email">
+      <div class="em">Required.</div>
+    </div>
+    <div class="fg" id="g-um-phone">
+      <label>Phone</label>
+      <input type="tel" id="um-phone">
+      <div class="em">Required.</div>
+    </div>
+    <div class="fg">
+      <label>Duration</label>
+      <div class="dur">
+        <label><input type="radio" name="um-dur" value="6" checked> 6 months</label>
+        <label><input type="radio" name="um-dur" value="12"> 1 year</label>
+        <label><input type="radio" name="um-dur" value="24"> 2 years</label>
+      </div>
+    </div>
+    <div class="fg">
+      <label>Active</label>
+      <div class="checks">
+        <label><input type="checkbox" id="um-act" checked> Active (checked = yes)</label>
+      </div>
+    </div>
+    <div class="bgrp">
+      <a href="maintain_user.html" class="btn btn-secondary">Back</a>
+      <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+  </form>
+</div>
+
+<script src="../js/data.js"></script><script src="../js/auth.js"></script><script src="../js/app.js"></script>
+</body>
+</html>

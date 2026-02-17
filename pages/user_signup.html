@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>User Sign Up | Event Management System</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="form-page">
+  <p style="font-size:.8rem;margin-bottom:10px;">
+    <a href="flowchart.html" style="color:#f57f17;font-weight:bold;">Chart</a>
+    &nbsp;&nbsp;
+    <a href="user_login.html">Back</a>
+  </p>
+  <h1>Event Management System</h1>
+  <p class="sub">User Sign Up</p>
+  <div id="us-m" class="alert"></div>
+  <form id="f-us" onsubmit="return userSignup(event)">
+    <div class="fg" id="g-us-name">
+      <label>Name</label>
+      <input type="text" id="us-name" placeholder="User">
+      <div class="em">Required.</div>
+    </div>
+    <div class="fg" id="g-us-uid">
+      <label>User Id</label>
+      <input type="text" id="us-uid" placeholder="User">
+      <div class="em">Required.</div>
+    </div>
+    <div class="fg" id="g-us-email">
+      <label>Email</label>
+      <input type="email" id="us-email" placeholder="User">
+      <div class="em">Required.</div>
+    </div>
+    <div class="fg" id="g-us-pwd">
+      <label>Password</label>
+      <input type="password" id="us-pwd" placeholder="User">
+      <div class="em">Required (min 6 chars).</div>
+    </div>
+    <div class="bgrp">
+      <a href="user_login.html" class="btn btn-secondary">Back</a>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </div>
+  </form>
+</div>
+
+<script src="../js/data.js"></script><script src="../js/auth.js"></script><script src="../js/app.js"></script>
+</body>
+</html>

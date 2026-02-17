@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Update Membership for Vendor | Event Management System</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav><div class="nav-links"><a class="chart-btn" href="flowchart.html">Chart</a> <a href="admin_dashboard.html">Home</a> <a href="maintain_user.html">Maintain User</a> <a href="maintain_vendor.html">Maintain Vendor</a> <a href="admin_reports.html">Reports</a> <a href="admin_transactions.html">Transactions</a> <a class="logout-btn" onclick="logout()">LogOut</a></div></nav>
+
+<div class="wrap" style="max-width:540px;">
+  <h2>Update Membership for Vendor</h2>
+  <p style="color:#888;font-size:.84rem;margin-bottom:12px;">Membership Number is mandatory. By default — six months extension is selected.</p>
+  <div id="uvm-m" class="alert"></div>
+  <form id="f-lvm" onsubmit="return lookupVM(event)">
+    <div class="fg" id="g-uvm-num">
+      <label>Membership Number</label>
+      <input type="text" id="uvm-num" placeholder="e.g. VM001">
+      <div class="em">Required.</div>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-bottom:16px;">Look Up</button>
+  </form>
+  <div id="uvm-flds" style="display:none;">
+    <form id="f-uvm" onsubmit="return doUpdateVM(event)">
+      <div class="fg"><label>Name</label><input type="text" id="uvm-name" readonly style="background:#f5f5f5;"></div>
+      <div class="fg"><label>Category</label><input type="text" id="uvm-cat" readonly style="background:#f5f5f5;"></div>
+      <div class="fg"><label>Expiry</label><input type="text" id="uvm-expiry" readonly style="background:#f5f5f5;"></div>
+      <div class="fg"><label>Status</label><input type="text" id="uvm-status" readonly style="background:#f5f5f5;"></div>
+      <div class="fg">
+        <label>Action</label>
+        <div class="radios">
+          <label><input type="radio" name="uvm-act" value="extend" checked onchange="togVExt()"> Extend Membership</label>
+          <label><input type="radio" name="uvm-act" value="cancel" onchange="togVExt()"> Cancel Membership</label>
+        </div>
+      </div>
+      <div id="uvm-ext-sec">
+        <div class="fg">
+          <label>Extension Duration (Default: 6 months)</label>
+          <div class="dur">
+            <label><input type="radio" name="uvm-ext" value="6" checked> 6 months</label>
+            <label><input type="radio" name="uvm-ext" value="12"> 1 year</label>
+            <label><input type="radio" name="uvm-ext" value="24"> 2 years</label>
+          </div>
+        </div>
+      </div>
+      <div class="bgrp">
+        <a href="maintain_vendor.html" class="btn btn-secondary">Back</a>
+        <button type="submit" class="btn btn-success">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="../js/data.js"></script><script src="../js/auth.js"></script><script src="../js/app.js"></script>
+</body>
+</html>
