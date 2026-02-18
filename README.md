@@ -14,8 +14,10 @@ A multi-role event management web application built from an Excel wireframe spec
 git clone https://github.com/dharmendra4522/Event-Management-System.git
 cd EventManagementSystem
 # Open index.html in your browser
-```
 
+```
+#Live 
+  https://dharmendra4522.github.io/Event-Management-System/
 ---
 
 ## Demo Credentials
